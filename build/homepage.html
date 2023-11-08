@@ -12,6 +12,9 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>BodyBalanceBites - Homepage</title>
+    <script>
+      src="https://unpkg.com/axios/dist/axios.min.js">
+    </script>
   </head>
 
   <body>
@@ -174,7 +177,7 @@
                 </label>
 
                 <input
-                  type="email"
+                  type="text"
                   id="height"
                   name="height"
                   class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm outline-none"
@@ -210,7 +213,7 @@
 
               <div id="BMIoutput" class="col-span-6 sm:col-span-3 ff3 hidden">
                 <label
-                  for="age"
+                  for="text"
                   class="block text-sm font-medium text-gray-700"
                 >
                   <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl ff2">
@@ -220,7 +223,11 @@
 
                 <div
                   id="output1"
-                  class="w-full resize-none text-2xl font-semibold align-middle ff2 px-0 align-top sm:text-sm sm:font-md text-center border-2 border-black"
+                  class="w-full resize-none text-2xl font-semibold align-middle ff2 px-0 sm:text-sm sm:font-md text-center border-2 border-black"
+                ></div>
+                <div
+                  id="output2"
+                  class="w-full resize-none text-2xl font-semibold align-middle ff2 px-0 sm:text-sm sm:font-md text-center border-2 border-black"
                 ></div>
               </div>
             </form>
@@ -261,157 +268,16 @@
           </div>
 
           <div class="lg:col-span-2 lg:py-8">
-            <ul class="grid grid-cols-2 gap-4">
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightLoss/Loss1.jpg"
-                    alt="card-1"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Salmon-Stuffed Avocados
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#fdfdfd]">
-                      Directions Combine yogurt, celery, parsley, lime juice,
-                      mayonnaise, mustard, salt, and pepper in a medium bowl;
-                      mix well. Add salmon and mix well. Halve avocados
-                      lengthwise and remove pits. Scoop about 1 tablespoon flesh
-                      from each avocado half into a small bowl. Mash the
-                      scooped-out avocado flesh with a fork and stir into the
-                      salmon mixture. Fill each avocado half with about 1/4 cup
-                      of the salmon mixture, mounding it on top of the avocado
-                      halves. Garnish with chives, if desired.
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightLoss/Loss2.jpg"
-                    alt="card-2"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Healthy weight loss salad
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#fdfdfd]">
-                      This high protein salad recipe for weight loss, is a
-                      filling meal for lunch or for dinner. Its loaded with
-                      healthy fats, fibre and protein making it a super filling
-                      weight loss salad recipe. The green goddess salad dressing
-                      is vegan and dairy free.
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+            <ul
+              class="grid grid-cols-2 gap-4 text-[#fdfdfd]"
+              id="recipeContainer"
+            ></ul>
           </div>
           <div id="MoreLoss" class="lg:col-span-3 lg:py-8 hidden">
-            <ul class="grid grid-cols-3 gap-4">
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightLoss/Loss3.jpeg"
-                    alt="card-1"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      One-Pan Rosemary Chicken and Root Vegetables.
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#fdfdfd]">
-                      You simply load up an aluminum-foil-lined sheet pan with
-                      your ingredients, pop ’em into the oven, and wait for
-                      dinner to be served. There’s no need to use excessive oil
-                      for cooking (a great way to keep the calories low), and
-                      clean-up is a breeze. Seriously, what’s to hate about
-                      that? In that spirit, we created this One-Pan Rosemary
-                      Chicken and Root Vegetables dish.I
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightLoss/Loss4.jpg"
-                    alt="card-1"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Bulletproof coffee recipe
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#fdfdfd]">
-                      how to make bulletproof coffee also known as keto coffee,
-                      ghee coffee, coconut coffee, butter coffee. Bulletproof
-                      coffee is a low carb coffee made with brewed coffee and a
-                      source of healthy fat. It can be had as a pre workout
-                      energy boost or as a weight loss coffee, Its a great way
-                      to boost energy and fat burning abilities in the morning.
-                      Its popular with people following a high fat low carb
-                      diet. Bulletproof coffee is to be drunk preferably on an
-                      empty stomach as it helps to increase energy and
-                      endurance, hence some people prefer to have it before
-                      workout. Bulletproof coffee also helps to boost your
-                      metabolism, suppress appetite and reduce inflammation.
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightLoss/Loss5.jpg"
-                    alt="card-1"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Summer Vegetable Gnocchi Salad
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#fdfdfd]">
-                      Preheat grill to medium-high.Boil gnocchi according to
-                      package directions. Drain. Meanwhile, brush eggplant,
-                      zucchini, squash, corn and onion with 2 tablespoons oil.
-                      Grill the vegetables, turning occasionally, until charred
-                      and tender, 6 to 10 minutes total. Transfer to a cutting
-                      board. Remove the corn kernels from the cob and cut the
-                      other vegetables into bite-size pieces. Whisk the
-                      remaining 2 tablespoons oil, vinegar, basil, garlic,
-                      pepper and salt in a large bowl. Add the gnocchi and the
-                      vegetables and toss to coat. Serve sprinkled with feta.
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <div id="output2"></div>
-            </ul>
+            <ul
+              class="grid grid-cols-3 gap-4 text-[#fdfdfd]"
+              id="recipeContainer2"
+            ></ul>
           </div>
         </div>
       </div>
@@ -449,147 +315,15 @@
           </div>
 
           <div class="lg:col-span-2 lg:py-8">
-            <ul class="grid grid-cols-2 gap-4">
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightGain/Gain1.jpg"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Dry Fruit Milkshake.
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#262424]">
-                      Combined with the rich and comforting taste of milk, the
-                      blended dry fruits give rise to a memorable Indian dry
-                      fruit milkshake which is boosted further by a crunchy
-                      garnish of mixed nuts . This dry fruits nuts milkshake is
-                      indeed a protein rich fare. Try and add less sugar If
-                      possible to make healthier You can make rich , sweet ,
-                      comforting taste of this dry fruits milkshake through your
-                      senses and revitalize your body
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightGain/Gain2.jpeg"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Steel cut oats or unfavoured instant oatmeals
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#262424]">
-                      Oatmeal is also a great meal for weight gain since you can
-                      easily add extra calories.Then, choose milk instead of
-                      water for extra calories and protein, followed by
-                      nutritious, calorie-dense toppings like: almonds walnuts
-                      and honey. Finally, top your oatmeal frozen fruit for a
-                      dash of sweetness and nutrition.
-                    </p>
-                  </div>
-                </a>
-              </li>
+            <ul class="grid grid-cols-2 gap-4 text-[#262424]" id="recipeContainer3">
+              
             </ul>
           </div>
 
           <div id="MoreGain" class="lg:col-span-3 lg:py-8 hidden">
-            <ul class="grid grid-cols-3 gap-4">
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightGain/Gain3.jpg"
-                    alt="card-1"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Moong Bhel
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#262424]">
-                      Moong Bhel Peanuts are cheap in India and make a super
-                      easy weight gain snack for kids in homemade Indian peanut
-                      butter which has all the right fats used in the recipe.
-                      The key is that there is no vegetable oil
-                      used in this recipe! Continue next paragraph* Filled with
-                      energy and protein, this tasty healthy moong Bhel snack
-                      gives enough energy and stamina to race through the rest
-                      of the day! Sprouted moong are a very good source of fibre
-                      too! It's necessary to cleanse your digestive tract
-                      and is good to eat
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightGain/Gain4.jpg"
-                    alt="card-1"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Carrot , Green Peas Creamy Sandwich 🥪
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#262424]">
-                      Creamy Toast sandwich A gooey spread of mixed veggies and
-                      cheese adds charm to crisp toasted bread. The contrast
-                      between the texture of the bread and the spread is very
-                      appealing, and so is the exciting flavour contributed by
-                      ginger and green chillies.
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="block group">
-                  <img
-                    src="./img/WeightGain/Gain5.jpg"
-                    class="object-cover w-full rounded aspect-square"
-                  />
-
-                  <div class="mt-3">
-                    <h3
-                      class="font-bold text-[#7F411C] group-hover:underline group-hover:underline-offset-4"
-                    >
-                      Broccoli oats panner tikki
-                    </h3>
-
-                    <p class="mt-1 text-sm text-[#262424]">
-                      The broccoli oats panner tikki is a simple yet innovative
-                      snack that'll brace the tummy for an exciting meal
-                      Featuring a healthy blend of ingredients like antioxidant
-                      -rich broccoli, calcium - rich panner and fibre - rich
-                      oats , this healthy Indian broccoli tikki tastes so
-                      fabulous that it does not feel like health food , but like
-                      a peppy starter just right to fire off a meal.
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <div id="output3"></div>
+            <ul class="grid grid-cols-3 gap-4 text-[#262424]" id="recipeContainer4">
+              
+              <!-- <div id="output3"></div> -->
             </ul>
           </div>
         </div>
@@ -882,6 +616,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/homepage.js"></script>
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
   </body>
