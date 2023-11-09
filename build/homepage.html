@@ -116,20 +116,20 @@
             Body Balance Bites creates personalized meal plans based on your
             food preferences, medical record and work schedule. Reach your diet
             and nutritional goals with our weekly meal plans, grocery lists and
-            more. Create your meal plan right here in seconds.
+            more.
           </p>
 
           <div class="mt-8 flex flex-wrap justify-center gap-4 text-center">
             <a
               href="#weightLoss"
-              class="block w-full rounded bg-[#161614] px-12 py-3 text-sm font-medium text-white shadow hover:bg-white hover:text-[#161614] focus:outline-none focus:ring active:bg-rose-500 sm:w-auto ff2"
+              class="block w-full rounded bg-[#161614] px-12 py-3 text-sm font-medium text-white shadow hover:bg-white hover:text-[#161614] focus:outline-none focus:ring sm:w-auto ff2"
             >
               Weight Loss
             </a>
 
             <a
               href="#weightGain"
-              class="block w-full bg-white text-[#161614] rounded px-12 py-3 text-sm font-medium shadow focus:outline-none focus:ring active:text-rose-500 sm:w-auto ff2"
+              class="block w-full bg-white text-[#161614] rounded px-12 py-3 text-sm font-medium shadow focus:outline-none focus:ring sm:w-auto ff2"
             >
               Weight Gain
             </a>
@@ -141,101 +141,73 @@
     <!-- Form Section of BMI -->
     <section id="BMI" class="bg-white">
       <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
-        <aside
-          class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6"
-        >
-          <img
-            alt="Pattern"
-            src="https://cdn.dribbble.com/users/1424699/screenshots/5082429/ezgif.com-video-to-gif__4_.gif"
-            class="absolute inset-0 h-full w-full object-cover"
-          />
-        </aside>
+          <aside class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
+              <img alt="Pattern"
+                  src="https://cdn.dribbble.com/users/1424699/screenshots/5082429/ezgif.com-video-to-gif__4_.gif"
+                  class="absolute inset-0 h-full w-full object-cover" />
+          </aside>
 
-        <main
-          class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
-        >
-          <div class="max-w-xl lg:max-w-3xl">
-            <h1
-              class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl ff3"
-            >
-              BMI Calculator
-            </h1>
+          <main
+              class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+              <div class="max-w-xl lg:max-w-3xl">
 
-            <p class="mt-4 leading-relaxed text-gray-500">
-              Don't wait any longer – knowing your BMI is the first step towards
-              a better lifestyle. Start your health journey now and gain
-              valuable insights into your health.
-            </p>
-
-            <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-              <div class="col-span-6">
-                <label
-                  for="height"
-                  class="block text-sm font-medium text-gray-700"
-                >
-                  Height in CM:
-                </label>
-
-                <input
-                  type="text"
-                  id="height"
-                  name="height"
-                  class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm outline-none"
-                /><br />
-                <span id="height_error"></span>
-              </div>
-
-              <div class="col-span-6">
-                <label
-                  for="weight"
-                  class="block text-sm font-medium text-gray-700"
-                >
-                  Weight in KG:
-                </label>
-
-                <input
-                  type="text"
-                  id="weight"
-                  name="weight"
-                  class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm outline-none"
-                /><br />
-                <span id="weight_error"></span>
-              </div>
-
-              <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
-                <button
-                  id="BMIbtn"
-                  class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                >
-                  Calculate
-                </button>
-              </div>
-
-              <div id="BMIoutput" class="col-span-6 sm:col-span-3 ff3 hidden">
-                <label
-                  for="text"
-                  class="block text-sm font-medium text-gray-700"
-                >
-                  <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl ff2">
-                    Here's your BMI
+                  <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl ff3">
+                      BMI Calculator
                   </h1>
-                </label>
 
-                <div
-                  id="output1"
-                  class="w-full resize-none text-2xl font-semibold align-middle ff2 px-0 sm:text-sm sm:font-md text-center border-2 border-black"
-                ></div>
-                <div
-                  id="output2"
-                  class="w-full resize-none text-2xl font-semibold align-middle ff2 px-0 sm:text-sm sm:font-md text-center border-2 border-black"
-                ></div>
+                  <p class="mt-4 leading-relaxed text-gray-500">
+                      Don't wait any longer – knowing your BMI is the first step towards a better lifestyle. Start
+                      your health journey now and gain valuable insights into your health.
+                  </p>
+
+                  <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+
+
+                      <div class="col-span-6">
+                          <label for="height" class="block text-sm font-medium text-gray-700">
+                              Height in CM:
+                          </label>
+
+                          <input type="email" id="height" name="height"
+                              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm outline-none" /><br>
+                          <span id="height_error"></span>
+                      </div>
+
+                      <div class="col-span-6">
+                          <label for="weight" class="block text-sm font-medium text-gray-700">
+                              Weight in KG:
+                          </label>
+
+                          <input type="text" id="weight" name="weight"
+                              class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm outline-none" /><br>
+                          <span id="weight_error"></span>
+                      </div>
+
+
+                      <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+                          <button id="BMIbtn"
+                              class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
+                              Calculate
+                          </button>
+                      </div>
+
+                      <div id="BMIoutput" class="col-span-6 sm:col-span-3 ff3 hidden">
+                          <label for="age" class="block text-sm font-medium text-gray-700">
+                              <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl ff2">
+                                  Here's your BMI
+                              </h1>
+                          </label>
+
+                          <div id="output1"
+                              class="w-full resize-none text-2xl font-semibold align-middle ff2 px-0 align-top sm:text-sm sm:font-md text-center border-2 border-black">
+                          </div>
+                      </div>
+
+                  </form>
               </div>
-            </form>
-          </div>
-        </main>
+          </main>
       </div>
-    </section>
-
+  </section>
     <!-- Weight-Loss Section of Homepage -->
     <section id="weightLoss" class="bg-[#262424]">
       <div class="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">

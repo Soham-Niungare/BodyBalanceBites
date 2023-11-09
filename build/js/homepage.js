@@ -1,55 +1,41 @@
-let button1 = document.getElementById("BMIbtn");
+let button1 = document.getElementById('BMIbtn');
 
-button1.addEventListener("click", () => {
-  const height = parseInt(document.getElementById("height").value);
-  const currentWeight = parseInt(document.getElementById("weight").value);
-  const result = document.getElementById("output1");
-  const prediction = document.getElementById("output2");
-  const bmiOutput = document.getElementById("BMIoutput");
-  bmiOutput.style.display = "block";
-  let height_status = false,
-    weight_status = false;
-  let newWeight, requiredWeight;
+button1.addEventListener('click', () => {
+    const height = parseInt(document.getElementById('height').value);
+    const weight = parseInt(document.getElementById('weight').value);
+    const result = document.getElementById('output1');
+    const bmiOutput = document.getElementById('BMIoutput');
+    bmiOutput.style.display = "block";
+    let height_status = false, weight_status = false;
 
-  if (height === "" || isNaN(height) || height <= 0) {
-    document.getElementById("height_error").innerHTML =
-      "Please provide a valid height";
-  } else {
-    document.getElementById("height_error").innerHTML = "";
-    height_status = true;
-  }
-
-  if (currentWeight === "" || isNaN(currentWeight) || currentWeight <= 0) {
-    document.getElementById("weight_error").innerHTML =
-      "Please provide a valid weight";
-  } else {
-    document.getElementById("weight_error").innerHTML = "";
-    weight_status = true;
-  }
-
-  if (height_status && weight_status) {
-    const bmi = (currentWeight / ((height * height) / 10000)).toFixed(2);
-
-    if (bmi < 18.6) {
-      result.innerHTML = "Under Weight : " + bmi;
-      newWeight = (18.6 * ((height * height) / 10000)).toFixed(2);
-      requiredWeight = (newWeight - currentWeight).toFixed(2);
-      prediction.innerHTML =
-        "You need to gain " + requiredWeight + "kgs of weight.";
-    } else if (bmi >= 18.6 && bmi < 24.9) {
-      result.innerHTML = "Normal : " + bmi;
-      prediction.style.display = "none";
+    if (height === '' || isNaN(height) || (height <= 0)) {
+        document.getElementById('height_error').innerHTML = 'Please provide a valid height';
     } else {
-      result.innerHTML = "Over Weight : " + bmi;
-      newWeight = (24.9 * ((height * height) / 10000)).toFixed(2);
-      requiredWeight = (currentWeight - newWeight).toFixed(2);
-      prediction.innerHTML =
-        "You need to lose " + requiredWeight + "kgs of weight.";
+        document.getElementById('height_error').innerHTML = '';
+        height_status = true;
     }
-  } else {
-    alert("The form has errors");
-    result.innerHTML = "";
-  }
+
+    if (weight === '' || isNaN(weight) || (weight <= 0)) {
+        document.getElementById('weight_error').innerHTML = 'Please provide a valid weight';
+    } else {
+        document.getElementById('weight_error').innerHTML = '';
+        weight_status = true;
+    }
+
+    if (height_status && weight_status) {
+        const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+        if (bmi < 18.6) {
+            result.innerHTML = 'Under weight : ' + bmi;
+        } else if (bmi >= 18.6 && bmi < 24.9) {
+            result.innerHTML = 'Normal : ' + bmi;
+        } else {
+            result.innerHTML = 'Over weight : ' + bmi;
+        }
+    } else {
+        alert('The form has errors');
+        result.innerHTML = '';
+    }
 });
 
 fetch(
@@ -303,13 +289,22 @@ button3.addEventListener("click", () => {
 });
 
 function sendEmail() {
+  // Email.send({
+  //   SecureToken: "b5ea760a-afb3-421f-b91b-56b4c592ed44",
+  //   To: "body.balance.bites@gmail.com",
+  //   From: "body.balance.bites@gmail.com",
+  //   Subject: "Users feedback",
+  //   Body: "Message :" + document.getElementById("message").value,
+  // }).then((message) => alert(message));
   Email.send({
-    SecureToken: "b5ea760a-afb3-421f-b91b-56b4c592ed44",
-    To: "body.balance.bites@gmail.com",
-    From: "body.balance.bites@gmail.com",
-    Subject: "Users feedback",
-    Body: "Message :" + document.getElementById("message").value,
-  }).then((message) => alert(message));
+    SecureToken : "c27e6a59-9540-41f1-b0f1-ada501feb2a0",
+    To : 'BodyBalanceBites7@gmail.com',
+    From : "BodyBalanceBites7@gmail.com",
+    Subject : "This is the subject",
+    Body : "Message :" + document.getElementById("message").value,
+}).then(
+  message => alert(message)
+);
 }
 
 
